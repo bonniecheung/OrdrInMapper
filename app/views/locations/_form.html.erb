@@ -1,0 +1,52 @@
+<%= form_for(@location) do |f| %>
+  <% if @location.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
+
+      <ul>
+      <% @location.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+
+  <%= form_for @location do |c| %>
+  <table>
+    <tr>
+      <td><%= c.label :street %>:</td> 
+      <td><%= c.text_field :street %></td>
+    </tr>
+    <tr>
+      <td><%= c.label :city %>:</td> 
+      <td><%= c.text_field :city %><td>
+    </tr>
+    <tr>
+      <td><%= c.label :zip %>:</td> 
+      <td><%= c.text_field :zip %></td>
+    </tr>
+    <tr>
+      <td><%= c.label :street2 %>:</td> 
+      <td><%= c.text_field :street2 %></td>
+    </tr>
+    <tr>
+      <td><%= c.label :state %>:</td> 
+      <td><%= c.text_field :state %></td>
+    </tr>
+    <tr>
+      <td><%= c.label :phone %>:</td> 
+      <td><%= c.text_field :phone %></td>
+    </tr>
+    <tr>
+      <td><%= c.label :nick %>:</td> 
+      <td><%= c.text_field :nick %></td>
+    </tr>
+  </table>
+  <p>
+  <%= c.submit %>  
+  <% end %>
+</form>
+</div>
+<% end %>

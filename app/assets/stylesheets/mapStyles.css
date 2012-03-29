@@ -1,0 +1,28 @@
+@CHARSET "ISO-8859-1";
+
+html {
+	height: 100%
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0
+}
+
+#mapCanvas {
+	width:100%;
+	height:90%
+}
+
+#llInput {
+	height:4%;
+}
+
+#addInput {
+	height:4%;
+}
+
+#clearInput {
+	float:right;
+}

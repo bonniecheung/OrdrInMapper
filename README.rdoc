@@ -1,0 +1,5 @@
+== Welcome to OrdrInMapper ==
+
+This application marks OrdrIn restaurants on a Google map for any masked vigilantes that may want to protect vulnerable delivery people for good karma.  The goal is that superheroes of all stripes will be notified, either through a mailing list or Twitter, when an order has been made and where in the city it's going.  That way they can actually get there on time before the bad guy escapes.  This is a work in progress and a learning experience with Ruby on Rails.
+
+Disclaimer:  Become a masked vigilante at your own risk.  I am not responsible for your health or your karma.

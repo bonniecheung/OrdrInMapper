@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<script type="text/javascript"
+  src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCQCgd-wZFg7Xtnz-WmnVsCzIcq7nqaa78&sensor=true">
+</script>
+<%= javascript_include_tag "mapLocator" %>
+<%= include_gon %>
+
+  <body onload="initialize()">
+<table>
+<tr>
+  <%= render 'locations', :location => @location %>
+  <td><%= link_to 'Edit', edit_location_path(@location) %></td>
+  <td><%= link_to 'Back', locations_path %></td>
+  <td><span id="addInput">
+        <button onclick="populateMap()">pin</button>
+    	</span> </td>
+   	<td><span id="clearInput">
+        <button onclick="clearOverlays()">reset</button>
+    </span></td>
+<tr>
+</table>
+
+    <div id="mapCanvas">
+    </div>
+
+Restaurants that can deliver to your address:
+
+<p><% @list.each do|list| %>
+<% @name = list["na"] %>
+<%= @name %>, 
+<% @address = list["ad"] %>
+<%= @address %><p>
+<% end %>
+  </body>
+
+
